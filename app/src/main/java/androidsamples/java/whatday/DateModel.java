@@ -22,7 +22,7 @@ public class DateModel {
      */
     private static final String TAG = "DataModel";
     private static String message = "";
-    public static void initialize(String yearStr, String monthStr, String dateStr) {
+    public static void initialize(String dateStr, String monthStr, String yearStr) {
         if (yearStr == null || monthStr == null || dateStr == null) {
             Log.i(TAG, "Null input provided");
             message = "Null input provided";
@@ -31,9 +31,11 @@ public class DateModel {
         int year, month, date;
 
         try {
-            year = Integer.parseInt(yearStr);
-            month = Integer.parseInt(monthStr);
             date = Integer.parseInt(dateStr);
+
+            month = Integer.parseInt(monthStr);
+            year = Integer.parseInt(yearStr);
+
         } catch (NumberFormatException e) {
             Log.i(TAG, "Invalid input: non-numeric value provided");
             message = "Invalid input: non-numeric value provided";
