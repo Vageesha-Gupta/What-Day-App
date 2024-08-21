@@ -20,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
     EditText editDate = findViewById(R.id.editDate);
     EditText editMonth = findViewById(R.id.editMonth);
     EditText editYear = findViewById(R.id.editYear);
+
     Button btnCheck = findViewById(R.id.btn_check);
     TextView txtDisplay = findViewById(R.id.txt_display);
 
@@ -28,10 +29,11 @@ public class MainActivity extends AppCompatActivity {
       @Override
       public void onClick(View v) {
         // Retrieve input from EditText fields
+
+
         String day = editDate.getText().toString();
         String month = editMonth.getText().toString();
         String year = editYear.getText().toString();
-
         // Initialize DateModel with the input data
         DateModel dateModel = new DateModel();
         dateModel.initialize(day, month, year);
