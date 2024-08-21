@@ -72,7 +72,7 @@ public class DateModel {
                 Log.i(TAG, "February of "+ yearStr+ "does not have " + dateStr + " days");
                 message="February of "+ yearStr+ " does not have " + dateStr + " days";
             }
-            else if(date>getMaxDaysInMonth(month,year)){
+            else if(date>getMaxDaysInMonth(month,year) && date<=31){
                 Log.i(TAG, "This month does not have "+ dateStr + "days");
                 message="This month does not have "+ dateStr + " days";
             }
