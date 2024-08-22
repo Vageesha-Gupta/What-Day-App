@@ -1,7 +1,6 @@
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/paV3BV1l)
-# WhatDay
-
-This simple Android app asks the user for a date in the Gregorian calendar and returns the day of the week for that date.
+## Project Name
+What Day App
 
 ## Student Details
 
@@ -17,6 +16,12 @@ The "What Day" app allows users to input a calendar date and returns the corresp
 1. Model Implementation: The first step involved implementing the logic to validate the input date. This included checking for out-of-range dates and months, ensuring the input was in a proper numeric format, and validating dates like February 29 in non-leap years. I utilized the Android Calendar API for the core functionality to ensure accuracy in determining the day of the week.
 2. UI Integration: After the model was implemented and tested, I integrated it with the user interface. This involved setting up an onClickListener for the button, which, when clicked, would pass the user input to the model, retrieve the day of the week or an error message, and display it on the UI.
 3. Testing: I ran several test cases to ensure the app handled various inputs correctly, including edge cases like invalid dates or non-numeric inputs. The tests verified that the model and UI worked together seamlessly, providing accurate results and clear error messages.
+
+We utilized ChatGPT as a resource during development. Whenever we encountered difficulties or needed clarification on certain coding aspects, we consulted ChatGPT for guidance. This helped us understand complex issues and proceed with the implementation confidently, without directly copying solutions. 
+Link: https://chatgpt.com
+
+We consulted the Stack Overflow website whenever we faced technical errors or challenges during development. The community-driven insights and solutions provided there were invaluable in resolving issues and advancing the project.
+Link : https://stackoverflow.com
 
 ## Testing
 We did not follow a strict test-driven development (TDD) approach. Instead, we first wrote the core code, focusing on validating dates and handling errors. After implementing this logic, we tested it to ensure accuracy. Once confident in the logic, we moved on to implement the UI and then ran the app against multiple test cases to verify the functionality.
