@@ -28,9 +28,10 @@ public class DateModel {
         calendar.set(Calendar.YEAR, year);
         return calendar.getActualMaximum(Calendar.DAY_OF_MONTH);
     }
-    public static void initialize(String dateStr, String monthStr, String yearStr) {
+    public static void initialize(String yearStr, String monthStr, String dateStr) {
         if (yearStr == null || monthStr == null || dateStr == null) {
-            Log.i(TAG, "Enter valid input");
+//            Log.i(TAG, "Enter valid input");
+            System.out.println(TAG + ": Enter valid input");
             message = "Enter valid input";
             return;
         }
@@ -43,18 +44,21 @@ public class DateModel {
             year = Integer.parseInt(yearStr);
 
         } catch (NumberFormatException e) {
-            Log.i(TAG, "Enter values in a proper numeric format");
+//            Log.i(TAG, "Enter values in a proper numeric format");
+            System.out.println(TAG + ": Enter values in a proper numeric format");
             message = "Enter values in a proper numeric format";
             return;
         }
 
         if (yearStr.length() > 4) {
-            Log.i(TAG, "Invalid year: " + yearStr);
+//            Log.i(TAG, "Invalid year: " + yearStr);
+            System.out.println(TAG + ": Invalid year: " + yearStr);
             message = "Invalid year: " + yearStr;
             return;
         }
         if (month < 1 || month > 12) {
-            Log.i(TAG, "Invalid month: " + monthStr);
+//            Log.i(TAG, "Invalid month: " + monthStr);
+            System.out.println(TAG + ": Invalid month: " + monthStr);
             message = "Invalid month" ;
             return;
         }
@@ -69,16 +73,19 @@ public class DateModel {
         }
         catch (IllegalArgumentException e) {
             if(month==2 && date==29){
-                Log.i(TAG, "February of "+ yearStr+ "does not have " + dateStr + " days");
+//                Log.i(TAG, "February of "+ yearStr+ "does not have " + dateStr + " days");
+                System.out.println(TAG + ": February of " + yearStr + " does not have " + dateStr + " days");
                 message="February of "+ yearStr+ " does not have " + dateStr + " days";
             }
             else if(date>getMaxDaysInMonth(month,year) && date<=31){
-                Log.i(TAG, "This month does not have "+ dateStr + "days");
+//                Log.i(TAG, "This month does not have "+ dateStr + "days");
+                System.out.println(TAG + ": This month does not have " + dateStr + " days");
                 message="This month does not have "+ dateStr + " days";
             }
             else{
-                Log.i(TAG, "Invalid date: " + yearStr + "-" + monthStr + "-" + dateStr);
-                message = "Invalid date: " + yearStr + "-" + monthStr + "-" + dateStr;
+//                Log.i(TAG, "Invalid date");
+                System.out.println(TAG + ": Invalid date");
+                message = "Invalid date";
             }
 
         }
