@@ -21,7 +21,10 @@ We utilized ChatGPT as a resource during development. Whenever we encountered di
 Link: https://chatgpt.com
 
 We consulted the Stack Overflow website whenever we faced technical errors or challenges during development. The community-driven insights and solutions provided there were invaluable in resolving issues and advancing the project.
-Link : https://stackoverflow.com
+Link: https://stackoverflow.com
+
+We also referred to GeeksforGeeks (GFG) to study and understand UI integration concepts, which was crucial in successfully linking the backend logic with the user interface in our app. 
+Link: https://www.geeksforgeeks.org
 
 ## Testing
 We did not follow a strict test-driven development (TDD) approach. Instead, we first wrote the core code, focusing on validating dates and handling errors. After implementing this logic, we tested it to ensure accuracy. Once confident in the logic, we moved on to implement the UI and then ran the app against multiple test cases to verify the functionality.
